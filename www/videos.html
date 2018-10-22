@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mobile Movie Makers</title>
+  <link rel="stylesheet" href="./css/mmm.css">
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body>
+
+  <div class="myMenu">
+    <div class="myLeft" onclick="window.history.back();"><i class="fas fa-arrow-left"></i></div>
+    <div class="titleBar">M3 Films</div>
+    <div class="myRight" onclick="window.location.href='./menu.html'"><i class="fas fa-bars "></i></div>
+  </div>
+  <div id="vidHolder">
+
+  </div>
+
+
+<script type="text/javascript">
+var youtubeVids = [
+  {  link:'https://www.youtube.com/embed/2OvbJyxntRE',  title:'M3 Commercial'},
+  {  link:'https://www.youtube.com/embed/TnGhWRqLFlc',  title:'2018 Mobile Movie Makers Film Finalist, "Hope"'},
+  {  link:'https://www.youtube.com/embed/8Ta1gWR0KSM',  title:'2018 Mobile Movie Makers Film Finalist, "The Move"'},
+  // {  link:'https://www.youtube.com/embed/arRmRJNTiPk',  title:'Mobile Movie Magic!'},
+  // {  link:'https://www.youtube.com/embed/JP-FTZqrnkY',  title:"KA'TRINA BRYANT"},
+  // {  link:'https://www.youtube.com/embed/zBAg1wFkL3g',  title:'DIALLO Song Builders'},
+  {  link:'https://www.youtube.com/embed/45Ae4XLQ_Jg',  title:'SONG BUILDERS INSTRUCTIONAL'},
+  // {  link:'https://www.youtube.com/embed/9ZVIE151KC8',  title:'SB IG'},
+  // {  link:'https://www.youtube.com/embed/jk-_AZC57mY',  title:'M3_ SONGBUILDERS_IG'},
+  // {  link:'https://www.youtube.com/embed/vkQSYI2bMsQ',  title:'M3 SONGBUILDERS'},
+  // {  link:'https://www.youtube.com/embed/xNLQjtI4_zU',  title:'M3 FILMTIPS'},
+  {  link:'https://www.youtube.com/embed/GP3CLPPT6FM',  title:'Official Mobile Movie Makers Sizzle Reel'},
+  // {  link:'https://www.youtube.com/embed/DOsjAMulVRU',  title:'"Babysitting Day"'},
+  // {  link:'https://www.youtube.com/embed/HDLNr_okVLI',  title:'"I\'m That Guy"'},
+  // {  link:'https://www.youtube.com/embed/XcA541_7LBo',  title:'"Lost"'},
+  // {  link:'https://www.youtube.com/embed/nhNuByn7xdE',  title:'Terri J Vaughn, encourages our youth!'},
+  // {  link:'https://www.youtube.com/embed/Z4LbWbisTpw',  title:'Actor Diallo Thompson'},
+  // {  link:'https://www.youtube.com/embed/udjAmgiBCDg',  title:'Stylist, Kairo Courts'},
+  // {  link:'https://www.youtube.com/embed/jh5X43z5_EY',  title:'Comedians, Hank Denson & Key Lewis'},
+  // {  link:'https://www.youtube.com/embed/EZAGCsr9mMI',  title:'M3 Team Promo'},
+  // {  link:'https://www.youtube.com/embed/oGK2CSnxUd4',  title:'MOBILE MOVIE MAKERS OFFICIAL'},
+  // {  link:'https://www.youtube.com/embed/gCrn1WXHL_I',  title:'A word from Sahar Simmons'},
+  // {  link:'https://www.youtube.com/embed/5Eqh-LCo4Ic',  title:'DCYOUNGFLY: Mobile Movie Makers PSA YFC Video'},
+  // {  link:'https://www.youtube.com/embed/RfvuPamCqtY',  title:'M3 Teaser'}
+];
+
+
+  var vidHolder = document.getElementById('vidHolder');
+  var vidBox = '';
+  for (var i = 0; i < youtubeVids.length; i++) {
+    vidBox += '<div class="Holder" style="border-bottom:2px solid grey; margin-bottom:15px;"> <div class="vid"> <iframe style="width:100%;height: 100%;" src="'+ youtubeVids[i].link +'" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> </div>      <div style="color:black;font-size:20px; text-align:center;Margin:10px;">'+ youtubeVids[i].title +'</div>    </div>    <!--  -->';
+  }
+
+vidHolder.innerHTML = vidBox;
+</script>
+</body>
+</html>

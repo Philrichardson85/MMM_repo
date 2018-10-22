@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mobile Movie Makers</title>
+  <link rel="stylesheet" href="./css/mmm.css">
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <div class="myMenu">
+    <div class="myLeft" onclick="window.history.back();"><i class="fas fa-arrow-left"></i></div>
+    <div class="titleBar">SPEAKERS &<br/> SPECIAL GUESTS</div>
+    <div class="myRight" onclick="window.location.href='./menu.html'"><i class="fas fa-bars "></i></div>
+  </div>
+
+  <!-- <div class="myTitle">FILM PANEL</div> -->
+  <div id="filmPanel"></div>
+  <!-- <div class="myTitle">MUSIC PANEL</div> -->
+  <div id="musicPanel"></div>
+  <!-- <div class="myTitle">Social Media/Marketing/You Tube Session</div> -->
+  <div id="socialPanel"></div>
+  <!-- <div class="myTitle">Film Screening Q & A</div> -->
+  <div id="qnaPanel">11</div>
+
+
+  <script type="text/javascript">
+    var film = [{
+        name: 'Stevie Baggs Jr',
+        image: './img/stevieBaggs.jpg',
+        title: 'Actor'
+      },
+      {
+        name: 'Cierra Glaude',
+        image: './img/CierraGlaude.png',
+        title: 'Film Maker'
+      },
+      {
+        name: 'Winsome Sinclair',
+        image: './img/WinsomeSinclair.png',
+        title: 'Casting Director'
+      },
+      {
+        name: 'Donald Jarmond',
+        image: './img/DonaldJarmond.png',
+        title: 'Film Producer'
+      },
+      {
+        name: 'January Curry ',
+        image: './img/JanuaryCurry.png',
+        title: 'Actress/Writer '
+      },
+      {
+        name: 'Tanyell Waivers',
+        image: './img/TanyellWaivers.png',
+        title: 'Actress'
+      },
+      {
+        name: 'Nicholas Ashe',
+        image: './img/NicholasAshe.png',
+        title: 'Actor'
+      },
+      {
+        name: 'Slick 23',
+        image: './img/Slick23.png',
+        title: 'Director/Producer'
+      }
+    ];
+
+    var music = [
+      // {
+      //   name: 'Ace McGinty',
+      //   image: './img/',
+      //   title: ''
+      // },
+      {
+        name: 'Ty Walker',
+        image: './img/tywalker.png',
+        title: 'Film Producer'
+      },
+      {
+        name: 'Rhonda Marie Alston',
+        image: './img/RhondaMarieAlston.png',
+        title: 'Talent Manager'
+      },
+      {
+        name: 'Neal Genys',
+        image: './img/NealGenys.png',
+        title: 'Comedian'
+      },
+      {
+        name: 'Armani Martin',
+        image: './img/ARMANI.png',
+        title: 'Producer'
+      },
+      {
+        name: 'Chris Henderson',
+        image: './img/ChrisHenderson.png',
+        title: 'Music Producer'
+      },
+      {
+        name: 'Henny Tha Bizness',
+        image: './img/HennyThaBizness.png',
+        title: 'Music Producer'
+      },
+      {
+        name: 'Mako Girls',
+        image: './img/MakoGirls.png',
+        title: 'Musical Guest'
+      },
+      {
+        name: 'Leo Davis',
+        image: './img/LeoDavis.png',
+        title: 'Music Producer'
+      },
+    ];
+
+    var social = [
+      {
+        name: 'Ken & Dearra',
+        image: './img/KenDearra.png',
+        title: 'Youtube Influencers'
+      }
+    ];
+
+    var qna = [{
+        name: 'Nadej Bailey',
+        image: './img/NadejBailey.png',
+        title: 'Actress'
+      },
+      {
+        name: 'Carl Ulysses Bowen',
+        image: './img/CarlUlyssesBowen.png',
+        title: 'Wardrobe/Costumes'
+      },
+      {
+        name: 'Erica Thomas',
+        image: './img/EricaThomas.png',
+        title: 'Georgia House Representative , Dist.39'
+      },
+      {
+        name: 'Jak Wilmont',
+        image: './img/JAKMILMONT.png',
+        title: 'Virtual Reality Animator '
+      }
+    ];
+
+
+
+    var filmPanel = document.getElementById('filmPanel');
+    var filmTxt = '';
+    for (var i = 0; i < film.length; i++) {
+      filmTxt += '<!--  -->  <div class="Holder"  style="border-bottom:2px solid grey; margin-bottom:15px;">  <div class="imageHolder myCenter">   <img style="width:100%;"  src="' + film[i].image +
+        '" alt=""></div>  <div style="width:100%; text-align: center;color:grey; font-size:15px; margin-top: 20px;">' + film[i].title + '</div>  <div style="width:100%; text-align: center;color:black; font-size:18px;">' + film[i].name +
+        '</div>  <div style="width:100%; text-align: center;color:grey; font-size:15px; margin-top: 20px;"></div>  </div> <!--  -->';
+    }
+    filmPanel.innerHTML = filmTxt;
+    //
+    var musicPanel = document.getElementById('musicPanel');
+    var musicTxt = '';
+    for (var i = 0; i < music.length; i++) {
+      musicTxt += '<!--  -->  <div class="Holder"  style="border-bottom:2px solid grey; margin-bottom:15px;">  <div class="imageHolder myCenter">   <img style="width:100%;"  src="' + music[i].image +
+        '" alt=""></div>  <div style="width:100%; text-align: center;color:grey; font-size:15px; margin-top: 20px;">' + music[i].title + '</div>  <div style="width:100%; text-align: center;color:black; font-size:18px;">' + music[i].name +
+        '</div>  <div style="width:100%; text-align: center;color:grey; font-size:15px; margin-top: 20px;"></div>  </div> <!--  -->';
+    }
+    musicPanel.innerHTML = musicTxt;
+    //
+    var socialPanel = document.getElementById('socialPanel');
+    var socialTxt = '';
+    for (var i = 0; i < social.length; i++) {
+      socialTxt += '<!--  -->  <div class="Holder"  style="border-bottom:2px solid grey; margin-bottom:15px;">  <div class="imageHolder myCenter">   <img style="width:100%;"  src="' + social[i].image +
+        '" alt=""></div>  <div style="width:100%; text-align: center;color:grey; font-size:15px; margin-top: 20px;">' + social[i].title + '</div>  <div style="width:100%; text-align: center;color:black; font-size:18px;">' + social[i].name +
+        '</div>  <div style="width:100%; text-align: center;color:grey; font-size:15px; margin-top: 20px;"></div>  </div> <!--  -->';
+    }
+    socialPanel.innerHTML = socialTxt;
+    //
+    var qnaPanel = document.getElementById('qnaPanel');
+    var qnaTxt = '';
+    for (var i = 0; i < qna.length; i++) {
+      qnaTxt += '<!--  -->  <div class="Holder"  style="border-bottom:2px solid grey; margin-bottom:15px;">  <div class="imageHolder myCenter">   <img style="width:100%;"  src="' + qna[i].image +
+        '" alt=""></div>  <div style="width:100%; text-align: center;color:grey; font-size:15px; margin-top: 20px;">' + qna[i].title + '</div>  <div style="width:100%; text-align: center;color:black; font-size:18px;">' + qna[i].name +
+        '</div>  <div style="width:100%; text-align: center;color:grey; font-size:15px; margin-top: 20px;"></div>  </div> <!--  -->';
+    }
+    qnaPanel.innerHTML = qnaTxt;
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+body, html{
+  margin: 0;
+  padding: 0;
+  font-family: 'Fjalla One', sans-serif;
+}
+.resource-logo{
+  max-width: 150px;
+height: auto;
+padding: 1rem;
+}
+.vid{
+  width: 100%;
+  background-color:white;
+  border: 1px grey solid;
+  background-size: 100px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../img/loading.gif);
+  height: 250px;
+  display: grid;
+  /* grid-template-columns:  auto auto auto; */
+}
+
+.socialBlocks{
+  text-align: center;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  color:grey;
+  font-size:15px;
+   margin: 20px;
+}
+.socialBlocks div{
+height: 150px;
+margin:5px;
+font-size: 20px;
+color: black;
+background-image: linear-gradient(#b8ebff,white);
+border: 1px solid #00d9fe;
+border-radius: 20px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+}
+.menuHolder{
+  background-color: #00d9fe;
+  display: flex;
+  margin: 0px;
+  justify-content: center;
+  align-items: center;
+  height:100%;
+  /* background-color: red; */
+  /* font-family: 'Montserrat', sans-serif; */
+font-family: 'Fjalla One', sans-serif;
+font-size: 45px;
+text-transform: capitalize;
+color: white;
+
+}
+a{
+  color: white;
+  text-decoration: none;
+}
+.myMenu{
+  width: 100%;
+  background-image: linear-gradient(#bcf5ff,white,white);
+  height: 80px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.myMenu div{
+    padding: 10px;
+    font-size:  30px;
+}
+.myPill{
+  color: white;
+  padding: 5px;
+  width: 100px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  background-color:#00d9fe;
+
+  border-radius: 30px;
+}
+.homeBTNs{
+  display:grid;
+  grid-template-columns:auto;
+}
+.myTitle{
+  font-size: 30px;
+  text-align: center;
+  margin: 15px;
+}
+.homeBTNs div{
+  display: flex;
+justify-content: center;
+align-items: center;
+height:80px;
+cursor: pointer;
+}
+.titleBar{
+  color: #00d9fe;
+  text-align: center;
+}
+.myLeft{
+  color:#00d9fe;
+text-align: center;
+}
+.myRight{
+  color:#00d9fe;
+text-align: center;
+}
+.Holder{
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  margin: 0px;
+  justify-content: center;
+font-family: 'Fjalla One', sans-serif;
+font-size: 45px;
+text-transform: capitalize;
+color: white;
+
+}
+.myCenter{
+  transform: translateX(-50%);
+  margin-left: 50%;
+}
+ul{
+  padding: 10px;
+  list-style-type: none;
+  text-align: center;
+}
+li{
+  padding: 10px;
+}
+.imageHolder{
+  height: 200px;
+  display: flex;
+    align-items: center;
+  width:200px;
+  background-color: grey;
+  border-radius: 500px;
+  overflow: hidden;
+}

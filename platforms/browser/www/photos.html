@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mobile Movie Makers</title>
+  <link rel="stylesheet" href="./css/mmm.css">
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <div class="myMenu">
+    <div class="myLeft" onclick="window.history.back();"><i class="fas fa-arrow-left"></i></div>
+    <div class="titleBar">PHOTOS</div>
+    <div class="myRight" onclick="window.location.href='./menu.html'"><i class="fas fa-bars "></i></div>
+  </div>
+
+  <div id="photoPanel"></div>
+
+
+
+<script type="text/javascript">
+
+var photo = [
+  {image:"./img/IMAGES/IMG_5824.jpg"},
+  {image:"./img/IMAGES/IMG_5829.jpg"},
+  {image:"./img/IMAGES/IMG_5877.jpg"},
+  {image:"./img/IMAGES/IMG_5907.jpg"},
+  {image:"./img/IMAGES/IMG_6377.jpg"},
+  {image:"./img/IMAGES/IMG_6397.jpg"},
+  {image:"./img/IMAGES/IMG_6470.jpg"},
+  {image:"./img/IMAGES/IMG_6473.jpg"},
+  {image:"./img/IMAGES/IMG_6603.jpg"},
+  {image:"./img/IMAGES/IMG_6910.jpg"},
+  {image:"./img/IMAGES/Pebblebrook-photo.jpg"},
+  {image:"./img/IMAGES/Pebblebrook-photo-2.jpg"}
+];
+
+var photoPanel = document.getElementById('photoPanel');
+var photoTxt = '';
+for (var i = 0; i < photo.length; i++) {
+  photoTxt += '<!--  -->  <div class="Holder"  style="border-bottom:2px solid grey; margin-bottom:15px;">  <div class="imageHolder myCenter" style="border-radius:0px; width:90%;">   <img style="width:100%;"  src="' + photo[i].image +
+    '" alt=""></div>  <div style="width:100%; text-align: center;color:grey; font-size:15px; margin-top: 20px;"></div>  <div style="width:100%; text-align: center;color:black; font-size:18px;"></div>  <div style="width:100%; text-align: center;color:grey; font-size:15px; margin-top: 20px;"></div>  </div> <!--  -->';
+}
+photoPanel.innerHTML = photoTxt;
+</script>
+</body>
+
+</html>
