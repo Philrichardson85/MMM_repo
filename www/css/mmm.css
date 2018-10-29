@@ -102,6 +102,7 @@ cursor: pointer;
 .titleBar{
   color: #00d9fe;
   text-align: center;
+  font-size:23px !important;
 }
 .myLeft{
   color:#00d9fe;
