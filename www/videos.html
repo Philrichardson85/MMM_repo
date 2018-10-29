@@ -19,8 +19,14 @@
   <div id="vidHolder">
 
   </div>
+<div style="background-color:#00d9fe; margin: 30px 0px 30px 0px;">
+  <img style="width: 100%; " src="./img/2018.png" alt="">
+</div>
 
 
+  <div id="vidHolder2">
+
+  </div>
 <script type="text/javascript">
 var youtubeVids = [
   {  link:'https://www.youtube.com/embed/2OvbJyxntRE',  title:'M3 Commercial', caption:""},
@@ -57,6 +63,20 @@ var youtubeVids = [
   }
 
 vidHolder.innerHTML = vidBox;
+
+//
+var youtubeVids2 = [
+  {  link:'https://www.youtube.com/embed/fbHd5zSKZ2o',  title:'The Stranger', caption:"Jullian Woodard presents \“The Stranger\”"},
+{  link:'https://www.youtube.com/embed/FHu3wOd_JD4',  title:'Breach - A Short Film by Charlexent Visionaries', caption:""},
+{  link:'https://www.youtube.com/embed/ePx6-2i9PsM',  title:'Mobile Movie Makers Youth Film Festival Finalist: "Open Your Eyes"', caption:"Director: Mary Dunn"},
+];
+var vidHolder2 = document.getElementById('vidHolder2');
+var vidBox2 = '';
+for (var i = 0; i < youtubeVids2.length; i++) {
+  vidBox2 += '<div class="Holder" style="border-bottom:2px solid grey; margin-bottom:15px;"> <div class="vid"> <iframe style="width:100%;height: 100%;" src="'+ youtubeVids2[i].link +'" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> </div>      <div style="color:black;font-size:20px; text-align:center;Margin:10px;">'+ youtubeVids2[i].title +'</div><div style="height:0px; transform: translateX(-50%); margin-left: 50%; border-top: grey 1px solid; width:200px; "></div><div style="color:black;font-size:12px;text-align: left;Margin:10px;padding-left: 40px;padding-right: 40px;">'+ youtubeVids2[i].caption +'</div>    </div>    <!--  -->';
+}
+
+vidHolder2.innerHTML = vidBox2;
 </script>
 </body>
 </html>
